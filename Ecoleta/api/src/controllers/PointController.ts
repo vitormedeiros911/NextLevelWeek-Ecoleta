@@ -7,7 +7,7 @@ class PointController {
 
     const parsedItems = String(items)
       .split(',')
-      .map(item => Number(item.trim()));
+      .map((item: String) => Number(item.trim()));
 
     const points = await knex('points')
       .join('point_items', 'point.id', '=', 'point_items.point_id')
