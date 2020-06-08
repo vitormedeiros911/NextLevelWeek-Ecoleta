@@ -69,7 +69,7 @@ const Points = () => {
       params: {
         city: routeParams.city,
         uf: routeParams.uf,
-        items: [selectedItems]
+        items: selectedItems
       }
     }).then(response => {
       setPoints(response.data)
